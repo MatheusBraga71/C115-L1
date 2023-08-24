@@ -21,6 +21,7 @@ while True:
     print("Cliente conectado:", client_socket.getpeername())
     qtd_acertos = 0  # Variável para armazenar a quantidade de acertos
 
+    # Inicia o envio das perguntas para o client
     for idx, pergunta in enumerate(perguntas, start=1):
         client_socket.send(json.dumps(pergunta).encode())  # Envia uma pergunta para o usuário
         resposta = client_socket.recv(1024).decode()  # Recebe a resposta escolhida pelo usuário

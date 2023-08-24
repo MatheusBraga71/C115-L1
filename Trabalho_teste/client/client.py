@@ -9,8 +9,10 @@ PORT = 12345
 # Inicializando o client
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+# Obtendo o endereço do server (host) por meio do nome
 server_ip = socket.gethostbyname(HOST)
 
+# Iniciando a conezão com o servidor
 client.connect((server_ip, PORT))
 print("Conectado ao servidor.")
 
