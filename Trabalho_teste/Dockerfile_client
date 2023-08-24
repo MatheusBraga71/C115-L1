@@ -1,0 +1,14 @@
+# Use a base image (Python, for example)
+FROM python:3.8-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy your client code into the container
+COPY client/ client/
+
+# Expose any necessary ports (if applicable)
+# EXPOSE ...
+
+# Command to run the client
+CMD ["python", "client/client.py"]

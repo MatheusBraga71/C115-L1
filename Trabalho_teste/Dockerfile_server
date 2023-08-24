@@ -1,0 +1,18 @@
+# Use a base image (Python, for example)
+FROM python:3.10.10
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy your server code and questions.json into the container
+COPY server/ server/
+COPY questions.json .
+
+# Install any necessary dependencies
+# RUN pip install json
+
+# Expose the port your server is running on
+EXPOSE 12345
+
+# Command to run the server
+CMD ["python", "server/server.py"]
