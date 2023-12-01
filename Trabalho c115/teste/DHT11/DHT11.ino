@@ -16,8 +16,8 @@ DHT dht(DHTPIN, DHTTYPE);
 #define DEBUG
 
 // inormações da rede wifi
-const char* ssid = "Gabriela_Matheus";
-const char* password = "corno2019";
+const char* ssid = "SSIS_NAME";
+const char* password = "PASSWORD";
 const char* mqttServer = "broker.emqx.io"; // Endereço IP do seu broker MQTT
 const int mqttPort = 1883; // Porta MQTT padrão
 const char* mqttTopic = "testeMABP/infos"; // Tópico MQTT para controle do LED
